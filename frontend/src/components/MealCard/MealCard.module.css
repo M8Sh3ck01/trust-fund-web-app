@@ -1,0 +1,122 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  /* Invisible aesthetic: no border, just faint background */
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-minimal);
+}
+
+.unavailable {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.unavailable:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--border-subtle);
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e5e5; /* Slightly darker than subtle border for contrast */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-1);
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.vegIcon {
+  color: var(--color-avail);
+  flex-shrink: 0;
+  margin-left: var(--spacing-1);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+  margin-top: auto; /* Push down to maintain alignment in grid */
+}
+
+.price {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.addButton {
+  width: 100%;
+  padding: var(--spacing-2) 0;
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1.5px solid var(--text-main);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addButton:hover:not(:disabled) {
+  background-color: var(--text-main);
+  color: var(--bg-app);
+}
+
+.btnDisabled {
+  background-color: var(--border-subtle);
+  color: var(--text-muted);
+}
+
+.btnAdded {
+  background-color: var(--color-avail);
+  color: var(--bg-app);
+}
+
+.btnContent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}

@@ -1,0 +1,232 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  padding: var(--spacing-2) 0;
+}
+
+.mealPreview {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.imageBox {
+  width: 64px;
+  height: 64px;
+  background-color: var(--bg-app);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-app);
+}
+
+.mealInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mealName {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.creditBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #22c55e;
+  text-transform: uppercase;
+}
+
+.quantitySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-6) 0;
+  background-color: var(--bg-app);
+  border-radius: var(--radius-lg);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.stepperBtn {
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.quantityVal {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.balanceInfo {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.confirmBtn {
+  width: 100%;
+  height: 56px;
+  background-color: #22c55e;
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.confirmBtn:active {
+  opacity: 0.8;
+}
+
+/* Success State - Instant Ticket */
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-4) 0 var(--spacing-8);
+  text-align: center;
+  gap: var(--spacing-6);
+}
+
+.memberBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background-color: #22c55e;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.qrWrapper {
+  padding: var(--spacing-4);
+  background-color: #f8fafc;
+  border-radius: var(--radius-lg);
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: ticketPulse 3s infinite ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrBox {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: var(--spacing-4);
+}
+
+.qrError {
+  width: 100px;
+  height: 100px;
+  background-color: #fee2e2;
+  border-radius: var(--radius-sm);
+}
+
+.qrCorner {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 6px solid #000;
+  border-radius: 4px;
+}
+
+.topL { top: -4px; left: -4px; border-right: none; border-bottom: none; }
+.topR { top: -4px; right: -4px; border-left: none; border-bottom: none; }
+.botL { bottom: -4px; left: -4px; border-right: none; border-top: none; }
+.botR { bottom: -4px; right: -4px; border-left: none; border-top: none; }
+
+.successInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.orderId {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.instructions {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding: 0 var(--spacing-4);
+}
+
+.doneBtn {
+  width: 100%;
+  height: 52px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  color: var(--text-main);
+  background: var(--bg-surface);
+  transition: all 0.2s;
+}
+
+.doneBtn:active {
+  background-color: var(--bg-app);
+  transform: scale(0.98);
+}
+
+@keyframes ticketPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+

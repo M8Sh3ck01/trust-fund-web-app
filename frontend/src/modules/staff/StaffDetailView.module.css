@@ -1,0 +1,179 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+/* Meta Header */
+.metaHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+:global(.dark) .metaHeader { border-bottom-color: #1f2937; }
+
+.idBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+.dateLabel {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Status Control */
+.statusSection {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+:global(.dark) .statusSection { background: #111827; }
+
+.statusControl {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.statusSelect {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+}
+
+:global(.dark) .statusSelect { border-color: #374151; background-color: #1f2937; }
+
+.statusSelect.Requested { background-color: #ebf5ff; color: #1e40af; }
+.statusSelect.Preparing { background-color: #fffbeb; color: #92400e; }
+.statusSelect.Ready { background-color: #ecfdf5; color: #065f46; }
+.statusSelect.Collected { background-color: #f3f4f6; color: #4b5563; }
+.statusSelect.Cancelled { background-color: #fef2f2; color: #991b1b; }
+.statusSelect.Confirmed { background-color: #f5f3ff; color: #5b21b6; }
+.statusSelect.Scheduled { background-color: #fefce8; color: #854d0e; }
+.statusSelect.ChangesMade { background-color: #fff7ed; color: #9a3412; }
+
+.saveStatusBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.saveStatusBtn:disabled {
+  background: #9ca3af;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Customer Section */
+.section { display: flex; flex-direction: column; gap: 0.75rem; }
+.sectionTitle { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: #9ca3af; letter-spacing: 0.1em; }
+
+.customerMain { display: flex; flex-direction: column; }
+.customerName { font-weight: 800; font-size: 1.1rem; color: #111827; }
+:global(.dark) .customerName { color: white; }
+.customerEmail { font-size: 0.85rem; color: #6b7280; }
+
+.detailRow { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: #4b5563; }
+:global(.dark) .detailRow { color: #9ca3af; }
+
+.paymentStatus {
+  font-weight: 700;
+  color: #10b981;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.timingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+:global(.dark) .timingGrid { background: #111827; }
+
+/* Items */
+.itemRow { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; }
+:global(.dark) .itemRow { border-bottom-color: #1f2937; }
+.itemName { font-weight: 600; font-size: 0.95rem; }
+.itemMeta { font-size: 0.8rem; color: #6b7280; }
+.itemPrice { font-weight: 700; }
+.totalRow { display: flex; justify-content: space-between; padding-top: 1rem; font-weight: 900; font-size: 1.1rem; }
+
+/* Inputs */
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field label { font-size: 0.8rem; font-weight: 700; color: #4b5563; }
+
+.headcountControl, .notesControl {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fieldIcon { position: absolute; left: 0.75rem; color: #9ca3af; }
+
+.headcountControl input, .notesControl textarea {
+  width: 100%;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+:global(.dark) .headcountControl input, :global(.dark) .notesControl textarea {
+  background: #1f2937;
+  border-color: #374151;
+  color: white;
+}
+
+.notesControl textarea { height: 80px; resize: none; }
+
+.finalSaveBtn {
+  width: 100%;
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+:global(.dark) .finalSaveBtn { background: #10b981; }
+
+.finalSaveBtn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); }

@@ -1,0 +1,258 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: var(--bg-app);
+  padding-bottom: 100px; /* Space for sticky footer */
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-4);
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.backBtn, .actionBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  color: var(--text-main);
+}
+
+.backBtn:hover, .actionBtn:hover {
+  background-color: var(--bg-surface);
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 300px;
+  background-color: var(--bg-surface);
+  position: relative;
+  overflow: hidden;
+  margin-top: 64px;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomFade 1.2s ease-out;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  opacity: 0.1;
+}
+
+@keyframes zoomFade {
+  from { transform: scale(1.1); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Main Content */
+.content {
+  padding: var(--spacing-6) var(--spacing-4);
+}
+
+.mainInfo {
+  margin-bottom: var(--spacing-8);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-1);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.vegIcon {
+  color: #22c55e;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-4);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  opacity: 0.8;
+}
+
+/* Meta Sections (Accordions) */
+.metaSections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.accordion {
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4) 0;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.accordionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--text-main);
+}
+
+.accordionContent {
+  padding-bottom: var(--spacing-4);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nutrition Grid */
+.nutritionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-2);
+}
+
+.nutriItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-2);
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+}
+
+.nutriVal {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.nutriLab {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Ingredient List */
+.ingredientList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.ingredientList li {
+  font-size: 0.875rem;
+  padding: var(--spacing-1) var(--spacing-3);
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+}
+
+/* Footer Sticky Action */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-4);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-subtle);
+  z-index: 100;
+}
+
+.footerInner {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: center;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-full);
+  padding: 4px;
+}
+
+.quantityControl button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.quantityControl span {
+  width: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.addBtn {
+  flex: 1;
+  height: 48px;
+  background-color: var(--text-main);
+  color: #fff;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.added {
+  background-color: #22c55e;
+  transform: scale(0.98);
+}
+
+/* Error State */
+.errorContainer {
+  padding: var(--spacing-8);
+  text-align: center;
+}

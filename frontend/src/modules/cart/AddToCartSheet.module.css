@@ -1,0 +1,181 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  padding: var(--spacing-2) 0;
+}
+
+.mealHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.imageBox {
+  width: 72px;
+  height: 72px;
+  background-color: var(--bg-app);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-surface);
+}
+
+.mealInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mealName {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.mealPrice {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.quantitySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-6) 0;
+  background-color: var(--bg-app);
+  border-radius: var(--radius-lg);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.stepperBtn {
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stepperBtn:active:not(:disabled) {
+  transform: scale(0.9);
+  background-color: var(--bg-app);
+}
+
+.stepperBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantityVal {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  min-width: 40px;
+  text-align: center;
+}
+
+.addBtn {
+  width: 100%;
+  height: 56px;
+  background-color: var(--text-main);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  transition: all 0.2s;
+}
+
+.addBtn:active {
+  opacity: 0.8;
+}
+
+.redeemBtn {
+  background-color: #22c55e;
+}
+
+.modeSection {
+  margin-top: var(--spacing-6);
+  padding-top: var(--spacing-6);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.modeToggle {
+  display: flex;
+  background-color: var(--bg-surface);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  margin: var(--spacing-2) 0;
+}
+
+.modeBtn {
+  flex: 1;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.modeBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.modeActive {
+  background-color: #fff;
+  color: var(--text-main);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.balancePreview {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #22c55e;
+  margin-top: var(--spacing-1);
+}
+
+.insufficientText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-danger);
+  margin-top: var(--spacing-1);
+}

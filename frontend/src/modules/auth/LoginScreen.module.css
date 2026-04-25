@@ -1,0 +1,184 @@
+/* ── Base ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap');
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f4ef;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 24px 20px;
+  gap: 24px;
+}
+
+/* ── Brand block (above card) ── */
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.logoCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid #c8b89a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b07d50;
+  background-color: #fdf9f4;
+}
+
+.logoIcon {
+  /* color set by parent */
+}
+
+.brandName {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.brandTagline {
+  font-size: 0.875rem;
+  color: #7a7166;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* ── Card ── */
+.card {
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border: 1px solid #e8e2d9;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  animation: fadeUp 0.4s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Google button ── */
+.googleBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  background: #ffffff;
+  border: 1px solid #d4cdc4;
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.googleBtn:hover:not(:disabled) {
+  background: #faf8f5;
+  border-color: #b9b2aa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transform: translateY(-1px);
+}
+
+.googleBtn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.googleBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ── Loading spinner ── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+  color: #7a7166;
+  flex-shrink: 0;
+}
+
+/* ── Secure note ── */
+.secureNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #a09890;
+  font-size: 0.775rem;
+}
+
+.lockIcon {
+  flex-shrink: 0;
+  display: block;
+  color: #a09890;
+}
+
+/* ── Footer ── */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footerLink {
+  font-size: 0.8rem;
+  color: #7a7166;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footerLink:hover {
+  color: #1a1a1a;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: #b0a99e;
+  margin: 0;
+}

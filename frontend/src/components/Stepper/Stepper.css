@@ -1,0 +1,73 @@
+.stepperContainer {
+  width: 100%;
+  margin-bottom: var(--spacing-8);
+}
+
+.stepNodes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 20px;
+  padding: 0 var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+}
+
+.nodeWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nodeWrapper:last-child {
+  flex: none;
+}
+
+.node {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--border-subtle);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.active {
+  background-color: var(--text-main);
+}
+
+.current {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: var(--border-subtle);
+  margin: 0 4px;
+}
+
+.lineActive {
+  background-color: var(--text-main);
+}
+
+.stepLabels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--spacing-1);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.labelActive {
+  color: var(--text-main);
+}

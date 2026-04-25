@@ -1,0 +1,253 @@
+.container {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  margin-bottom: var(--spacing-4);
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1rem;
+  height: 48px;
+  padding: 0 var(--spacing-2);
+  margin-left: -8px;
+  background: transparent;
+}
+
+.backBtn:active {
+  opacity: 0.6;
+}
+
+/* Progress Tracker */
+.progressTracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 0 var(--spacing-4);
+}
+
+.stepNodes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.node {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--border-subtle);
+  position: relative;
+  z-index: 2;
+}
+
+.activeNode {
+  background-color: var(--text-main);
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: var(--border-subtle);
+  margin: 0 -4px;
+  z-index: 1;
+}
+
+.activeLine {
+  background-color: var(--text-main);
+}
+
+.stepLabels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.activeLabel {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Accordion Summary */
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.accordionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-weight: 600;
+}
+
+.accordionContent {
+  padding: var(--spacing-3) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-3);
+  font-size: 1rem;
+}
+
+.summaryLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.redeemBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.creditSummary {
+  color: #22c55e;
+  font-weight: 600;
+  border-top: 1px dashed var(--border-subtle);
+  padding-top: var(--spacing-3);
+  margin-top: var(--spacing-3);
+}
+
+.qtyMark {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.summaryTotal {
+  font-weight: 600;
+  color: var(--text-main);
+  padding-top: var(--spacing-2);
+  margin-top: var(--spacing-1);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.editLink {
+  color: var(--text-main);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: var(--spacing-2);
+  text-decoration: underline;
+}
+
+/* User Details */
+.sectionHeader h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-3);
+}
+
+.detailsCard {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.detailLabel {
+  color: var(--text-muted);
+  width: 80px;
+}
+
+.detailValue {
+  color: var(--text-main);
+  font-weight: 500;
+  flex: 1;
+}
+
+.lockIcon {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+/* Payment Section */
+.paymentSection {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.dueRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.dueTotal {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.payBtn {
+  background-color: var(--text-main);
+  color: var(--bg-app);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.payBtn:hover {
+  opacity: 0.9;
+}
+
+.secureText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

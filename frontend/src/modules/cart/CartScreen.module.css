@@ -1,0 +1,245 @@
+.container {
+  padding: 0 var(--spacing-4) var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-3);
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  margin-bottom: var(--spacing-2);
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1rem;
+  height: 48px;
+  padding: 0 var(--spacing-2);
+  margin-left: -8px;
+  background: transparent;
+}
+
+.backBtn:active {
+  opacity: 0.6;
+}
+
+.clearBtn {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.clearBtn:active {
+  background-color: var(--color-danger);
+  color: #fff;
+  border-color: var(--color-danger);
+}
+
+.pageTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-2);
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.cartRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemNameWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.itemName {
+  font-weight: 500;
+}
+
+.vegIcon {
+  color: var(--color-avail);
+}
+
+.itemPrice {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.deleteBtn {
+  color: var(--text-muted);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteBtn:hover {
+  color: var(--color-danger);
+}
+
+.preferenceSection {
+  background-color: var(--bg-surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.prefLabel {
+  font-weight: 500;
+  margin-bottom: var(--spacing-1);
+}
+
+.radioRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.radioRow input[type="radio"] {
+  accent-color: var(--text-main);
+  cursor: pointer;
+}
+
+.dietSummary {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  padding: var(--spacing-2) 0;
+}
+
+.totalsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin-top: auto; /* Pushes the totals and checkout button to the bottom! */
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.grandTotal {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: var(--spacing-2);
+  padding-top: var(--spacing-2);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.checkoutBtn {
+  width: 100%;
+  padding: var(--spacing-4);
+  background-color: var(--text-main);
+  color: var(--bg-app);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: var(--spacing-4);
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.checkoutBtn:hover {
+  background-color: #333333;
+}
+
+/* Progress Tracker (shared pattern with CheckoutScreen) */
+.progressTracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4) var(--spacing-4) 0;
+}
+
+.stepNodes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.node {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--border-subtle);
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.activeNode {
+  background-color: var(--text-main);
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: var(--border-subtle);
+  margin: 0 -4px;
+  z-index: 1;
+}
+
+.activeLine {
+  background-color: var(--text-main);
+}
+
+.stepLabels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.activeLabel {
+  color: var(--text-main);
+  font-weight: 600;
+}

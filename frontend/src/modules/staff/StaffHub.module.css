@@ -1,0 +1,145 @@
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+:global(.dark) .container {
+  background-color: #030712;
+  color: #f3f4f6;
+}
+
+.content {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Compact Dashboard Cards */
+.compactCard {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+:global(.dark) .compactCard {
+  background: #111827;
+  border-color: #1f2937;
+}
+
+.compactCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-color: #10b981;
+}
+
+/* Newly arrived card — flashes green then fades out */
+.newCard {
+  border-color: #10b981;
+  background: #f0fdf4;
+  animation: flashNew 4s ease-out forwards;
+}
+
+:global(.dark) .newCard {
+  background: rgba(16, 185, 129, 0.08);
+}
+
+@keyframes flashNew {
+  0%   { border-color: #10b981; background: #dcfce7; }
+  30%  { border-color: #10b981; background: #f0fdf4; }
+  100% { border-color: #e5e7eb; background: white; }
+}
+
+.newBadge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: #10b981;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  animation: fadeOutBadge 4s ease-out forwards;
+}
+
+@keyframes fadeOutBadge {
+  0%, 60% { opacity: 1; }
+  100%     { opacity: 0; }
+}
+
+.cardInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.compactId {
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+:global(.dark) .compactId {
+  background: #1f2937;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.Requested { background: #3b82f6; } /* Blue */
+.Preparing { background: #f59e0b; } /* Amber */
+.Ready { background: #10b981; }     /* Emerald */
+.Confirmed { background: #8b5cf6; } /* Violet */
+.Scheduled { background: #6b7280; } /* Gray */
+
+.compactTitle {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.compactSub {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.cardIcon {
+  color: #9ca3af;
+  padding-left: 1rem;
+}
+
+.loading, .empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.empty p {
+  font-weight: 600;
+}

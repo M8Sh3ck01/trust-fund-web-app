@@ -1,7 +1,7 @@
 # --- Dependencies & Environments ---
 # This ignores these folders/files anywhere in the project (root, client, or backend)
 node_modules/
-.env
+
 
 # --- Build Folders ---
 build/

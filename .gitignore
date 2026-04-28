@@ -1,9 +1,15 @@
-# Ignore local environment variables
+# --- Dependencies & Environments ---
+# This ignores these folders/files anywhere in the project (root, client, or backend)
 node_modules/
 .env
 
+# --- Build Folders ---
 build/
 dist/
 
+# --- Personal ---
+/personal-docs/
+
+
 # Ignore my personal workspace folder
-_local/
+/_local/

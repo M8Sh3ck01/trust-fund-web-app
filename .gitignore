@@ -9,3 +9,7 @@ dist/
 
 # --- Personal ---
 /personal-docs/
+
+
+# Ignore my personal workspace folder
+/_local/

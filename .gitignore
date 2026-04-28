@@ -15,3 +15,6 @@ node_modules/
 .env
 build/
 dist/
+
+# Ignore my personal workspace folder
+_local/
